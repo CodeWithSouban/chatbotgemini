@@ -14,7 +14,7 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 # Configure Gemini
 genai.configure(api_key=GEMINI_API_KEY)
 # Note: Ensure the model name is correct. Standard is "gemini-1.5-flash"
-model = genai.GenerativeModel("gemini-1.5-flash") 
+model = genai.GenerativeModel("gemini-2.5-flash")
 
 # Initialize Bot
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
@@ -61,4 +61,5 @@ def ai_reply(message):
 if __name__ == "__main__":
     print("✅ Bot is starting...")
     keep_alive()  # Start the fake web server
+
     bot.infinity_polling() # Start the bot
